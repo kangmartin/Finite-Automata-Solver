@@ -1,0 +1,71 @@
+C:\Users\marti\Documents\ProjetAutomate\venv\Scripts\python.exe C:\Users\marti\Documents\ProjetAutomate\E2_main.py
+Entrez le numero de l'automate: 15
+----------------------------------------------------------------------------------------
+                     PROJET AUTOMATE S4 : TRAITEMENT D'AUTOMATE FINI
+----------------------------------------------------------------------------------------
+AFFICHAGE DES INFORMATIONS DE NOTRE FICHIER :
+Alphabet:  ['a', 'b', 'c', 'd']
+Etats initiaux:  ['1']
+Etats terminaux:  ['4']
+Nombre d'états:  5
+Les differentes transitions:  [['0a0'], ['1a1', '1d4', '1c3', '1b2'], ['2a0', '2b2', '2c3', '2d4'], ['3a0', '3b0', '3c3', '3d4'], ['4a0', '4b0', '4c0', '4d4']]
+
+Apres la creation d'une table de transition et le remplissage de celle-ci, voici l'automate sous la forme matricielle :
+[['0', '-', '-', '-'], ['1', '2', '3', '4'], ['0', '2', '3', '4'], ['0', '0', '3', '4'], ['0', '0', '0', '4']]
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : Affichage d'un automate quelconque sous la forme de tableau
+2. Option 2 : Affichage d'un automate complet sous la forme de tableau
+3. Option 3 : Passez ces étapes
+4. Option 4 (dédié pour les traces d'executions): Tout afficher (quelconque, standard, deterministe et complet)
+Entrez le numéro de l'option que vous voulez choisir : 1
+
+============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
++----+------+---+---+---+---+
+| -- | Etat | a | b | c | d |
++----+------+---+---+---+---+
+| -  |  0   | 0 | - | - | - |
+| E  |  1   | 1 | 2 | 3 | 4 |
+| -  |  2   | 0 | 2 | 3 | 4 |
+| -  |  3   | 0 | 0 | 3 | 4 |
+| S  |  4   | 0 | 0 | 0 | 4 |
++----+------+---+---+---+---+
+Entrez le numéro de l'option que vous voulez choisir : 4
+
+
+ ============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
+
++----+------+---+---+---+---+
+| -- | Etat | a | b | c | d |
++----+------+---+---+---+---+
+| -  |  0   | 0 | - | - | - |
+| E  |  1   | 1 | 2 | 3 | 4 |
+| -  |  2   | 0 | 2 | 3 | 4 |
+| -  |  3   | 0 | 0 | 3 | 4 |
+| S  |  4   | 0 | 0 | 0 | 4 |
++----+------+---+---+---+---+
+
+
+ ============================== DETERMINISATION ET COMPLET: ==============================
+
+
+L'automate est déjà deterministe !
+
+  ============================== STANDARDISATION: ==============================
+
+L'automate n'est pas standard a la base, voici la version standardisé:
+
+
++----+------+---+---+---+---+
+| -- | Etat | a | b | c | d |
++----+------+---+---+---+---+
+| E  |  i   | 1 | 2 | 3 | 4 |
+| -  |  0   | 0 | - | - | - |
+| -  |  1   | 1 | 2 | 3 | 4 |
+| -  |  2   | 0 | 2 | 3 | 4 |
+| -  |  3   | 0 | 0 | 3 | 4 |
+| S  |  4   | 0 | 0 | 0 | 4 |
++----+------+---+---+---+---+
+Entrez le numéro de l'option que vous voulez choisir :
