@@ -1,0 +1,67 @@
+C:\Users\marti\Documents\ProjetAutomate\venv\Scripts\python.exe C:\Users\marti\Documents\ProjetAutomate\E2_main.py
+Entrez le numero de l'automate: 43
+----------------------------------------------------------------------------------------
+                     PROJET AUTOMATE S4 : TRAITEMENT D'AUTOMATE FINI
+----------------------------------------------------------------------------------------
+AFFICHAGE DES INFORMATIONS DE NOTRE FICHIER :
+Alphabet:  ['a', 'c']
+Etats initiaux:  ['0']
+Etats terminaux:  ['2']
+Nombre d'états:  3
+Les differentes transitions:  [['0a0', '0b0', '0b1'], ['1a2'], ['2a2', '2b2']]
+
+Apres la creation d'une table de transition et le remplissage de celle-ci, voici l'automate sous la forme matricielle :
+[['0', '0,1'], ['2', '-'], ['2', '2']]
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : Affichage d'un automate quelconque sous la forme de tableau
+2. Option 2 : Affichage d'un automate complet sous la forme de tableau
+3. Option 3 : Passez ces étapes
+4. Option 4 (dédié pour les traces d'executions): Tout afficher (quelconque, standard, deterministe et complet)
+Entrez le numéro de l'option que vous voulez choisir : 4
+
+
+ ============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
+
++----+------+---+-----+
+| -- | Etat | a |  b  |
++----+------+---+-----+
+| E  |  0   | 0 | 0,1 |
+| -  |  1   | 2 |  -  |
+| S  |  2   | 2 |  2  |
++----+------+---+-----+
+Nouveux états apres determinisation:  ['0', '01', '02', '012']
+
+
+
+ ============================== DETERMINISATION ET COMPLET: ==============================
+
+
+
+Table de transition après determinisation
+
+L'automate est déjà complet donc pas de completion a faire
++----+------+----+-----+
+| -- | Etat | a  |  b  |
++----+------+----+-----+
+| E  |  0   | 0  |  01 |
+| -  |  01  | 02 |  01 |
+| S  |  02  | 02 | 012 |
+| S  | 012  | 02 | 012 |
++----+------+----+-----+
+
+  ============================== STANDARDISATION: ==============================
+
+L'automate n'est pas standard a la base, voici la version standardisé:
+
+
++----+------+---+-----+
+| -- | Etat | a |  b  |
++----+------+---+-----+
+| E  |  i   | 0 |  01 |
+| -  |  0   | 0 | 0,1 |
+| -  |  1   | 2 |  -  |
+| S  |  2   | 2 |  2  |
++----+------+---+-----+
+Entrez le numéro de l'option que vous voulez choisir :

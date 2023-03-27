@@ -1,0 +1,87 @@
+C:\Users\marti\Documents\ProjetAutomate\venv\Scripts\python.exe C:\Users\marti\Documents\ProjetAutomate\E2_main.py
+Entrez le numero de l'automate: 28
+----------------------------------------------------------------------------------------
+                     PROJET AUTOMATE S4 : TRAITEMENT D'AUTOMATE FINI
+----------------------------------------------------------------------------------------
+AFFICHAGE DES INFORMATIONS DE NOTRE FICHIER :
+Alphabet:  ['a']
+Etats initiaux:  ['1']
+Etats terminaux:  ['0', '3']
+Nombre d'états:  6
+Les differentes transitions:  [['0a4'], ['1a2', '1a4'], ['2a3'], ['3a2'], ['4a5'], ['5a0']]
+
+Apres la creation d'une table de transition et le remplissage de celle-ci, voici l'automate sous la forme matricielle :
+[['4'], ['2,4'], ['3'], ['2'], ['5'], ['0']]
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : Affichage d'un automate quelconque sous la forme de tableau
+2. Option 2 : Affichage d'un automate complet sous la forme de tableau
+3. Option 3 : Passez ces étapes
+4. Option 4 (dédié pour les traces d'executions): Tout afficher (quelconque, standard, deterministe et complet)
+Entrez le numéro de l'option que vous voulez choisir : 2
++----+------+-----+
+| -- | Etat |  a  |
++----+------+-----+
+| S  |  0   |  4  |
+| E  |  1   | 2,4 |
+| -  |  2   |  3  |
+| S  |  3   |  2  |
+| -  |  4   |  5  |
+| -  |  5   |  0  |
++----+------+-----+
+Entrez le numéro de l'option que vous voulez choisir : 4
+
+
+ ============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
+
++----+------+-----+
+| -- | Etat |  a  |
++----+------+-----+
+| S  |  0   |  4  |
+| E  |  1   | 2,4 |
+| -  |  2   |  3  |
+| S  |  3   |  2  |
+| -  |  4   |  5  |
+| -  |  5   |  0  |
++----+------+-----+
+Nouveux états apres determinisation:  ['1', '24', '35', '20', '34', '25', '30']
+
+
+
+ ============================== DETERMINISATION ET COMPLET: ==============================
+
+
+
+Table de transition après determinisation
+
+L'automate est déjà complet donc pas de completion a faire
++----+------+----+
+| -- | Etat | a  |
++----+------+----+
+| E  |  1   | 24 |
+| -  |  24  | 35 |
+| S  |  35  | 20 |
+| S  |  20  | 34 |
+| S  |  34  | 25 |
+| -  |  25  | 30 |
+| S  |  30  | 24 |
++----+------+----+
+
+  ============================== STANDARDISATION: ==============================
+
+L'automate n'est pas standard a la base, voici la version standardisé:
+
+
++----+------+-----+
+| -- | Etat |  a  |
++----+------+-----+
+| E  |  i   |  24 |
+| S  |  0   |  4  |
+| -  |  1   | 2,4 |
+| -  |  2   |  3  |
+| S  |  3   |  2  |
+| -  |  4   |  5  |
+| -  |  5   |  0  |
++----+------+-----+
+Entrez le numéro de l'option que vous voulez choisir :

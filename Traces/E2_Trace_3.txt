@@ -1,0 +1,59 @@
+C:\Users\marti\Documents\ProjetAutomate\venv\Scripts\python.exe C:\Users\marti\Documents\ProjetAutomate\E2_main.py
+Entrez le numero de l'automate: 3
+----------------------------------------------------------------------------------------
+                     PROJET AUTOMATE S4 : TRAITEMENT D'AUTOMATE FINI
+----------------------------------------------------------------------------------------
+AFFICHAGE DES INFORMATIONS DE NOTRE FICHIER :
+Alphabet:  ['a']
+Etats initiaux:  ['0']
+Etats terminaux:  ['1']
+Nombre d'états:  2
+Les differentes transitions:  [['0a1']]
+
+Apres la creation d'une table de transition et le remplissage de celle-ci, voici l'automate sous la forme matricielle :
+[['1'], ['-']]
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : Affichage d'un automate quelconque sous la forme de tableau
+2. Option 2 : Affichage d'un automate complet sous la forme de tableau
+3. Option 3 : Passez ces étapes
+4. Option 4 (dédié pour les traces d'executions): Tout afficher (quelconque, standard, deterministe et complet)
+Entrez le numéro de l'option que vous voulez choisir : 2
++----+------+---+
+| -- | Etat | a |
++----+------+---+
+| E  |  0   | 1 |
+| S  |  1   | P |
++----+------+---+
+Entrez le numéro de l'option que vous voulez choisir : 4
+
+
+ ============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
+
++----+------+---+
+| -- | Etat | a |
++----+------+---+
+| E  |  0   | 1 |
+| S  |  1   | P |
++----+------+---+
+
+
+ ============================== DETERMINISATION ET COMPLET: ==============================
+
+
+L'automate est déjà deterministe !
+
+  ============================== STANDARDISATION: ==============================
+
+L'automate n'est pas standard a la base, voici la version standardisé:
+
+
++----+------+---+
+| -- | Etat | a |
++----+------+---+
+| E  |  i   | 1 |
+| -  |  0   | 1 |
+| S  |  1   | P |
++----+------+---+
+Entrez le numéro de l'option que vous voulez choisir :

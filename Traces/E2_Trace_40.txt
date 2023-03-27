@@ -1,0 +1,82 @@
+C:\Users\marti\Documents\ProjetAutomate\venv\Scripts\python.exe C:\Users\marti\Documents\ProjetAutomate\E2_main.py
+Entrez le numero de l'automate: 40
+----------------------------------------------------------------------------------------
+                     PROJET AUTOMATE S4 : TRAITEMENT D'AUTOMATE FINI
+----------------------------------------------------------------------------------------
+AFFICHAGE DES INFORMATIONS DE NOTRE FICHIER :
+Alphabet:  ['a', 'b']
+Etats initiaux:  ['0', '1']
+Etats terminaux:  ['0', '2']
+Nombre d'états:  3
+Les differentes transitions:  [['0b1', '0b2'], ['1a0', '1a2', '1b2'], ['2a0']]
+
+Apres la creation d'une table de transition et le remplissage de celle-ci, voici l'automate sous la forme matricielle :
+[['-', '1,2'], ['0,2', '2'], ['0', '-']]
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : Affichage d'un automate quelconque sous la forme de tableau
+2. Option 2 : Affichage d'un automate complet sous la forme de tableau
+3. Option 3 : Passez ces étapes
+4. Option 4 (dédié pour les traces d'executions): Tout afficher (quelconque, standard, deterministe et complet)
+Entrez le numéro de l'option que vous voulez choisir : 4
+
+
+ ============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
+
++----+------+-----+-----+
+| -- | Etat |  a  |  b  |
++----+------+-----+-----+
+| ES |  0   |  -  | 1,2 |
+| E  |  1   | 0,2 |  2  |
+| S  |  2   |  0  |  -  |
++----+------+-----+-----+
+Nouveux états apres determinisation:  ['01', '02', '12', '0', '2']
+
+
+
+ ============================== DETERMINISATION ET COMPLET: ==============================
+
+
+
+Table de transition après determinisation
+
+AVANT COMPLETION:
+Nouveux états apres determinisation:  ['01', '02', '12', '0', '2']
+
++----+------+----+----+
+| -- | Etat | a  | b  |
++----+------+----+----+
+| E  |  01  | 02 | 12 |
+| S  |  02  | 0  | 12 |
+| S  |  12  | 02 | 2  |
+| S  |  0   | -  | 12 |
+| S  |  2   | 0  | -  |
++----+------+----+----+
+
+APRES COMPLETION:
+
++----+------+----+----+
+| -- | Etat | a  | b  |
++----+------+----+----+
+| E  |  01  | 02 | 12 |
+| S  |  02  | 0  | 12 |
+| S  |  12  | 02 | 2  |
+| S  |  0   | P  | 12 |
+| S  |  2   | 0  | P  |
++----+------+----+----+
+
+  ============================== STANDARDISATION: ==============================
+
+L'automate n'est pas standard a la base, voici la version standardisé:
+
+
++----+------+-----+-----+
+| -- | Etat |  a  |  b  |
++----+------+-----+-----+
+| E  |  i   |  02 |  12 |
+| S  |  0   |  -  | 1,2 |
+| -  |  1   | 0,2 |  2  |
+| S  |  2   |  0  |  -  |
++----+------+-----+-----+
+Entrez le numéro de l'option que vous voulez choisir :

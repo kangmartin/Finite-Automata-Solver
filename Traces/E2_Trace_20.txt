@@ -1,0 +1,111 @@
+C:\Users\marti\Documents\ProjetAutomate\venv\Scripts\python.exe C:\Users\marti\Documents\ProjetAutomate\E2_main.py
+Entrez le numero de l'automate: 20
+----------------------------------------------------------------------------------------
+                     PROJET AUTOMATE S4 : TRAITEMENT D'AUTOMATE FINI
+----------------------------------------------------------------------------------------
+AFFICHAGE DES INFORMATIONS DE NOTRE FICHIER :
+Alphabet:  ['a', 'b', 'c', 'd']
+Etats initiaux:  ['1', '6', '7', '8', '0']
+Etats terminaux:  ['1', '5']
+Nombre d'états:  9
+Les differentes transitions:  [['0d5'], ['1a2'], ['2b3'], ['3c4'], ['4d5'], ['6a2'], ['7b3'], ['8c4']]
+
+Apres la creation d'une table de transition et le remplissage de celle-ci, voici l'automate sous la forme matricielle :
+[['-', '-', '-', '5'], ['2', '-', '-', '-'], ['-', '3', '-', '-'], ['-', '-', '4', '-'], ['-', '-', '-', '5'], ['-', '-', '-', '-'], ['2', '-', '-', '-'], ['-', '3', '-', '-'], ['-', '-', '4', '-']]
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : Affichage d'un automate quelconque sous la forme de tableau
+2. Option 2 : Affichage d'un automate complet sous la forme de tableau
+3. Option 3 : Passez ces étapes
+4. Option 4 (dédié pour les traces d'executions): Tout afficher (quelconque, standard, deterministe et complet)
+Entrez le numéro de l'option que vous voulez choisir : 1
+
+============================== TABLE DE TRANSITION DE BASE DE L'AUTOMATE ==============================
+
++----+------+---+---+---+---+
+| -- | Etat | a | b | c | d |
++----+------+---+---+---+---+
+| E  |  0   | - | - | - | 5 |
+| ES |  1   | 2 | - | - | - |
+| -  |  2   | - | 3 | - | - |
+| -  |  3   | - | - | 4 | - |
+| -  |  4   | - | - | - | 5 |
+| S  |  5   | - | - | - | - |
+| E  |  6   | 2 | - | - | - |
+| E  |  7   | - | 3 | - | - |
+| E  |  8   | - | - | 4 | - |
++----+------+---+---+---+---+
+Entrez le numéro de l'option que vous voulez choisir : 3
+
+Menu : plusieurs choix s'offrent à vous :
+1. Option 1 : L'automate est standard ?
+2. Option 2 : L'automate est deterministe ?
+3. Option 3 : L'automate est complet ?
+5. Option 5 : Passez ces étapes
+Entrez le numéro de l'option que vous voulez choisir : 2
+Non, voulez vous le rendre déterministe ? : tappez y pour oui et n pour non
+y
+
+ ============================== DETERMINISATION: ==============================
+
+
+Table de transition après determinisation
+
+Nouveux états apres determinisation:  ['16780', '2', '3', '4', '5']
+
++----+-------+---+---+---+---+
+| -- |  Etat | a | b | c | d |
++----+-------+---+---+---+---+
+| E  | 16780 | 2 | 3 | 4 | 5 |
+| -  |   2   | - | 3 | - | - |
+| -  |   3   | - | - | 4 | - |
+| -  |   4   | - | - | - | 5 |
+| S  |   5   | - | - | - | - |
++----+-------+---+---+---+---+
+Oui, mais voulez vous le rendre complet ? : tappez y pour oui et n pour non
+y
++----+-------+---+---+---+---+
+| -- |  Etat | a | b | c | d |
++----+-------+---+---+---+---+
+| E  | 16780 | 2 | 3 | 4 | 5 |
+| -  |   2   | P | 3 | P | P |
+| -  |   3   | P | P | 4 | P |
+| -  |   4   | P | P | P | 5 |
+| S  |   5   | P | P | P | P |
++----+-------+---+---+---+---+
+Entrez le numéro de l'option que vous voulez choisir : 1
+L'automate n'est pas standard, voulez vous le rendre standard ? : tappez y pour oui et n pour non
+y
+
+  ============================== STANDARDISATION: ==============================
+
++----+------+---+---+---+---+
+| -- | Etat | a | b | c | d |
++----+------+---+---+---+---+
+| E  |  i   | 2 | 3 | 4 | 5 |
+| -  |  0   | - | - | - | 5 |
+| S  |  1   | 2 | - | - | - |
+| -  |  2   | - | 3 | - | - |
+| -  |  3   | - | - | 4 | - |
+| -  |  4   | - | - | - | 5 |
+| S  |  5   | - | - | - | - |
+| -  |  6   | 2 | - | - | - |
+| -  |  7   | - | 3 | - | - |
+| -  |  8   | - | - | 4 | - |
++----+------+---+---+---+---+
+Il n'est pas complet voulez vous le completer ? (y ou n): y
++----+------+---+---+---+---+
+| -- | Etat | a | b | c | d |
++----+------+---+---+---+---+
+| E  |  i   | 2 | 3 | 4 | 5 |
+| -  |  0   | P | P | P | 5 |
+| S  |  1   | 2 | P | P | P |
+| -  |  2   | P | 3 | P | P |
+| -  |  3   | P | P | 4 | P |
+| -  |  4   | P | P | P | 5 |
+| S  |  5   | P | P | P | P |
+| -  |  6   | 2 | P | P | P |
+| -  |  7   | P | 3 | P | P |
+| -  |  8   | P | P | 4 | P |
++----+------+---+---+---+---+
+Entrez le numéro de l'option que vous voulez choisir :
